@@ -1,0 +1,19 @@
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.webDocumentationLink = webDocumentationLink;
+
+var _constants = require("../constants");
+
+/**
+ * Generate a URL to the web documentation taking in account the plugin short version or specified version.
+ * @param urlPath Relative path to the base URL + version.
+ * @param version version. Optional. It will use the plugin short version by default.
+ * @returns 
+ */
+function webDocumentationLink(urlPath, version = _constants.PLUGIN_VERSION_SHORT) {
+  return `${_constants.DOCUMENTATION_WEB_BASE_URL}/${version}/${urlPath}`;
+}
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYl9kb2N1bWVudGF0aW9uLnRzIl0sIm5hbWVzIjpbIndlYkRvY3VtZW50YXRpb25MaW5rIiwidXJsUGF0aCIsInZlcnNpb24iLCJQTFVHSU5fVkVSU0lPTl9TSE9SVCIsIkRPQ1VNRU5UQVRJT05fV0VCX0JBU0VfVVJMIl0sIm1hcHBpbmdzIjoiOzs7Ozs7O0FBQUE7O0FBRUE7Ozs7OztBQU1PLFNBQVNBLG9CQUFULENBQThCQyxPQUE5QixFQUErQ0MsT0FBZSxHQUFHQywrQkFBakUsRUFBK0Y7QUFDbEcsU0FBUSxHQUFFQyxxQ0FBMkIsSUFBR0YsT0FBUSxJQUFHRCxPQUFRLEVBQTNEO0FBQ0giLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBET0NVTUVOVEFUSU9OX1dFQl9CQVNFX1VSTCwgUExVR0lOX1ZFUlNJT05fU0hPUlQgfSBmcm9tICcuLi9jb25zdGFudHMnO1xuXG4vKipcbiAqIEdlbmVyYXRlIGEgVVJMIHRvIHRoZSB3ZWIgZG9jdW1lbnRhdGlvbiB0YWtpbmcgaW4gYWNjb3VudCB0aGUgcGx1Z2luIHNob3J0IHZlcnNpb24gb3Igc3BlY2lmaWVkIHZlcnNpb24uXG4gKiBAcGFyYW0gdXJsUGF0aCBSZWxhdGl2ZSBwYXRoIHRvIHRoZSBiYXNlIFVSTCArIHZlcnNpb24uXG4gKiBAcGFyYW0gdmVyc2lvbiB2ZXJzaW9uLiBPcHRpb25hbC4gSXQgd2lsbCB1c2UgdGhlIHBsdWdpbiBzaG9ydCB2ZXJzaW9uIGJ5IGRlZmF1bHQuXG4gKiBAcmV0dXJucyBcbiAqL1xuZXhwb3J0IGZ1bmN0aW9uIHdlYkRvY3VtZW50YXRpb25MaW5rKHVybFBhdGg6IHN0cmluZywgdmVyc2lvbjogc3RyaW5nID0gUExVR0lOX1ZFUlNJT05fU0hPUlQpOiBzdHJpbmcge1xuICAgIHJldHVybiBgJHtET0NVTUVOVEFUSU9OX1dFQl9CQVNFX1VSTH0vJHt2ZXJzaW9ufS8ke3VybFBhdGh9YDtcbn0iXX0=

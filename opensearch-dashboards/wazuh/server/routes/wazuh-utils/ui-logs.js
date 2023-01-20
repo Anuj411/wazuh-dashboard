@@ -1,0 +1,42 @@
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.UiLogsRoutes = void 0;
+
+var _controllers = require("../../controllers");
+
+var _configSchema = require("@osd/config-schema");
+
+/*
+ * Wazuh app - Module for UI Logs routes
+ * Copyright (C) 2015-2022 Wazuh, Inc.
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 2 of the License, or
+ * (at your option) any later version.
+ *
+ * Find more information about this on the LICENSE file.
+ */
+const UiLogsRoutes = router => {
+  const ctrl = new _controllers.UiLogsCtrl();
+  router.get({
+    path: '/utils/logs/ui',
+    validate: false
+  }, async (context, request, response) => await ctrl.getUiLogs(response));
+  router.post({
+    path: '/utils/logs/ui',
+    validate: {
+      body: _configSchema.schema.object({
+        message: _configSchema.schema.string(),
+        level: _configSchema.schema.string(),
+        location: _configSchema.schema.string()
+      })
+    }
+  }, async (context, request, response) => await ctrl.createUiLogs(request, response));
+};
+
+exports.UiLogsRoutes = UiLogsRoutes;
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInVpLWxvZ3MudHMiXSwibmFtZXMiOlsiVWlMb2dzUm91dGVzIiwicm91dGVyIiwiY3RybCIsIlVpTG9nc0N0cmwiLCJnZXQiLCJwYXRoIiwidmFsaWRhdGUiLCJjb250ZXh0IiwicmVxdWVzdCIsInJlc3BvbnNlIiwiZ2V0VWlMb2dzIiwicG9zdCIsImJvZHkiLCJzY2hlbWEiLCJvYmplY3QiLCJtZXNzYWdlIiwic3RyaW5nIiwibGV2ZWwiLCJsb2NhdGlvbiIsImNyZWF0ZVVpTG9ncyJdLCJtYXBwaW5ncyI6Ijs7Ozs7OztBQVdBOztBQUVBOztBQWJBOzs7Ozs7Ozs7OztBQWVPLE1BQU1BLFlBQVksR0FBSUMsTUFBRCxJQUFxQjtBQUMvQyxRQUFNQyxJQUFJLEdBQUcsSUFBSUMsdUJBQUosRUFBYjtBQUNBRixFQUFBQSxNQUFNLENBQUNHLEdBQVAsQ0FDRTtBQUNFQyxJQUFBQSxJQUFJLEVBQUUsZ0JBRFI7QUFFRUMsSUFBQUEsUUFBUSxFQUFFO0FBRlosR0FERixFQUtFLE9BQU9DLE9BQVAsRUFBZ0JDLE9BQWhCLEVBQXlCQyxRQUF6QixLQUFzQyxNQUFNUCxJQUFJLENBQUNRLFNBQUwsQ0FBZUQsUUFBZixDQUw5QztBQVFBUixFQUFBQSxNQUFNLENBQUNVLElBQVAsQ0FDRTtBQUNFTixJQUFBQSxJQUFJLEVBQUUsZ0JBRFI7QUFFRUMsSUFBQUEsUUFBUSxFQUFFO0FBQ1JNLE1BQUFBLElBQUksRUFBRUMscUJBQU9DLE1BQVAsQ0FBYztBQUNsQkMsUUFBQUEsT0FBTyxFQUFFRixxQkFBT0csTUFBUCxFQURTO0FBRWxCQyxRQUFBQSxLQUFLLEVBQUVKLHFCQUFPRyxNQUFQLEVBRlc7QUFHbEJFLFFBQUFBLFFBQVEsRUFBRUwscUJBQU9HLE1BQVA7QUFIUSxPQUFkO0FBREU7QUFGWixHQURGLEVBV0UsT0FBT1QsT0FBUCxFQUFnQkMsT0FBaEIsRUFBeUJDLFFBQXpCLEtBQXNDLE1BQU1QLElBQUksQ0FBQ2lCLFlBQUwsQ0FBa0JYLE9BQWxCLEVBQTJCQyxRQUEzQixDQVg5QztBQWFELENBdkJNIiwic291cmNlc0NvbnRlbnQiOlsiLypcbiAqIFdhenVoIGFwcCAtIE1vZHVsZSBmb3IgVUkgTG9ncyByb3V0ZXNcbiAqIENvcHlyaWdodCAoQykgMjAxNS0yMDIyIFdhenVoLCBJbmMuXG4gKlxuICogVGhpcyBwcm9ncmFtIGlzIGZyZWUgc29mdHdhcmU7IHlvdSBjYW4gcmVkaXN0cmlidXRlIGl0IGFuZC9vciBtb2RpZnlcbiAqIGl0IHVuZGVyIHRoZSB0ZXJtcyBvZiB0aGUgR05VIEdlbmVyYWwgUHVibGljIExpY2Vuc2UgYXMgcHVibGlzaGVkIGJ5XG4gKiB0aGUgRnJlZSBTb2Z0d2FyZSBGb3VuZGF0aW9uOyBlaXRoZXIgdmVyc2lvbiAyIG9mIHRoZSBMaWNlbnNlLCBvclxuICogKGF0IHlvdXIgb3B0aW9uKSBhbnkgbGF0ZXIgdmVyc2lvbi5cbiAqXG4gKiBGaW5kIG1vcmUgaW5mb3JtYXRpb24gYWJvdXQgdGhpcyBvbiB0aGUgTElDRU5TRSBmaWxlLlxuICovXG5pbXBvcnQgeyBVaUxvZ3NDdHJsIH0gZnJvbSAnLi4vLi4vY29udHJvbGxlcnMnO1xuaW1wb3J0IHsgSVJvdXRlciB9IGZyb20gJ29wZW5zZWFyY2hfZGFzaGJvYXJkcy9zZXJ2ZXInO1xuaW1wb3J0IHsgc2NoZW1hIH0gZnJvbSAnQG9zZC9jb25maWctc2NoZW1hJztcblxuZXhwb3J0IGNvbnN0IFVpTG9nc1JvdXRlcyA9IChyb3V0ZXI6IElSb3V0ZXIpID0+IHtcbiAgY29uc3QgY3RybCA9IG5ldyBVaUxvZ3NDdHJsKCk7XG4gIHJvdXRlci5nZXQoXG4gICAge1xuICAgICAgcGF0aDogJy91dGlscy9sb2dzL3VpJyxcbiAgICAgIHZhbGlkYXRlOiBmYWxzZSxcbiAgICB9LFxuICAgIGFzeW5jIChjb250ZXh0LCByZXF1ZXN0LCByZXNwb25zZSkgPT4gYXdhaXQgY3RybC5nZXRVaUxvZ3MocmVzcG9uc2UpXG4gICk7XG5cbiAgcm91dGVyLnBvc3QoXG4gICAge1xuICAgICAgcGF0aDogJy91dGlscy9sb2dzL3VpJyxcbiAgICAgIHZhbGlkYXRlOiB7XG4gICAgICAgIGJvZHk6IHNjaGVtYS5vYmplY3Qoe1xuICAgICAgICAgIG1lc3NhZ2U6IHNjaGVtYS5zdHJpbmcoKSxcbiAgICAgICAgICBsZXZlbDogc2NoZW1hLnN0cmluZygpLFxuICAgICAgICAgIGxvY2F0aW9uOiBzY2hlbWEuc3RyaW5nKCksXG4gICAgICAgIH0pLFxuICAgICAgfSxcbiAgICB9LFxuICAgIGFzeW5jIChjb250ZXh0LCByZXF1ZXN0LCByZXNwb25zZSkgPT4gYXdhaXQgY3RybC5jcmVhdGVVaUxvZ3MocmVxdWVzdCwgcmVzcG9uc2UpXG4gICk7XG59O1xuIl19

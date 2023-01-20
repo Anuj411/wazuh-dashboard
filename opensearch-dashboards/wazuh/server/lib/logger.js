@@ -1,0 +1,30 @@
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.log = void 0;
+
+var _baseLogger = require("./base-logger");
+
+var _constants = require("../../common/constants");
+
+/*
+ * Wazuh app - Module for logging functions
+ * Copyright (C) 2015-2022 Wazuh, Inc.
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 2 of the License, or
+ * (at your option) any later version.
+ *
+ * Find more information about this on the LICENSE file.
+ */
+const logger = new _baseLogger.BaseLogger(_constants.WAZUH_DATA_LOGS_PLAIN_FILENAME, _constants.WAZUH_DATA_LOGS_RAW_FILENAME);
+
+const log = (location, message, level) => {
+  logger.log(location, message, level);
+};
+
+exports.log = log;
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImxvZ2dlci50cyJdLCJuYW1lcyI6WyJsb2dnZXIiLCJCYXNlTG9nZ2VyIiwiV0FaVUhfREFUQV9MT0dTX1BMQUlOX0ZJTEVOQU1FIiwiV0FaVUhfREFUQV9MT0dTX1JBV19GSUxFTkFNRSIsImxvZyIsImxvY2F0aW9uIiwibWVzc2FnZSIsImxldmVsIl0sIm1hcHBpbmdzIjoiOzs7Ozs7O0FBV0E7O0FBQ0E7O0FBWkE7Ozs7Ozs7Ozs7O0FBaUJBLE1BQU1BLE1BQU0sR0FBRyxJQUFJQyxzQkFBSixDQUFlQyx5Q0FBZixFQUErQ0MsdUNBQS9DLENBQWY7O0FBRU8sTUFBTUMsR0FBRyxHQUFHLENBQUNDLFFBQUQsRUFBV0MsT0FBWCxFQUFvQkMsS0FBcEIsS0FBOEI7QUFDL0NQLEVBQUFBLE1BQU0sQ0FBQ0ksR0FBUCxDQUFXQyxRQUFYLEVBQXFCQyxPQUFyQixFQUE4QkMsS0FBOUI7QUFDRCxDQUZNIiwic291cmNlc0NvbnRlbnQiOlsiLypcbiAqIFdhenVoIGFwcCAtIE1vZHVsZSBmb3IgbG9nZ2luZyBmdW5jdGlvbnNcbiAqIENvcHlyaWdodCAoQykgMjAxNS0yMDIyIFdhenVoLCBJbmMuXG4gKlxuICogVGhpcyBwcm9ncmFtIGlzIGZyZWUgc29mdHdhcmU7IHlvdSBjYW4gcmVkaXN0cmlidXRlIGl0IGFuZC9vciBtb2RpZnlcbiAqIGl0IHVuZGVyIHRoZSB0ZXJtcyBvZiB0aGUgR05VIEdlbmVyYWwgUHVibGljIExpY2Vuc2UgYXMgcHVibGlzaGVkIGJ5XG4gKiB0aGUgRnJlZSBTb2Z0d2FyZSBGb3VuZGF0aW9uOyBlaXRoZXIgdmVyc2lvbiAyIG9mIHRoZSBMaWNlbnNlLCBvclxuICogKGF0IHlvdXIgb3B0aW9uKSBhbnkgbGF0ZXIgdmVyc2lvbi5cbiAqXG4gKiBGaW5kIG1vcmUgaW5mb3JtYXRpb24gYWJvdXQgdGhpcyBvbiB0aGUgTElDRU5TRSBmaWxlLlxuICovXG5pbXBvcnQgeyBCYXNlTG9nZ2VyIH0gZnJvbSAnLi9iYXNlLWxvZ2dlcic7XG5pbXBvcnQge1xuICBXQVpVSF9EQVRBX0xPR1NfUExBSU5fRklMRU5BTUUsXG4gIFdBWlVIX0RBVEFfTE9HU19SQVdfRklMRU5BTUUsXG59IGZyb20gJy4uLy4uL2NvbW1vbi9jb25zdGFudHMnO1xuXG5jb25zdCBsb2dnZXIgPSBuZXcgQmFzZUxvZ2dlcihXQVpVSF9EQVRBX0xPR1NfUExBSU5fRklMRU5BTUUsIFdBWlVIX0RBVEFfTE9HU19SQVdfRklMRU5BTUUpO1xuXG5leHBvcnQgY29uc3QgbG9nID0gKGxvY2F0aW9uLCBtZXNzYWdlLCBsZXZlbCkgPT4ge1xuICBsb2dnZXIubG9nKGxvY2F0aW9uLCBtZXNzYWdlLCBsZXZlbCk7XG59O1xuIl19

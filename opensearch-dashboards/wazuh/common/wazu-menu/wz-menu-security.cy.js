@@ -1,0 +1,28 @@
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.WAZUH_MENU_SECURITY_SECTIONS_CY_TEST_ID = void 0;
+
+/*
+ * Wazuh app - Wazuh Constants file for Cypress
+ * Copyright (C) 2015-2022 Wazuh, Inc.
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 2 of the License, or
+ * (at your option) any later version.
+ *
+ * Find more information about this on the LICENSE file.
+ */
+let WAZUH_MENU_SECURITY_SECTIONS_CY_TEST_ID;
+exports.WAZUH_MENU_SECURITY_SECTIONS_CY_TEST_ID = WAZUH_MENU_SECURITY_SECTIONS_CY_TEST_ID;
+
+(function (WAZUH_MENU_SECURITY_SECTIONS_CY_TEST_ID) {
+  WAZUH_MENU_SECURITY_SECTIONS_CY_TEST_ID["USERS"] = "menuSecurityUsersLink";
+  WAZUH_MENU_SECURITY_SECTIONS_CY_TEST_ID["ROLES"] = "menuSecurityRolesLink";
+  WAZUH_MENU_SECURITY_SECTIONS_CY_TEST_ID["POLICIES"] = "menuSecurityPoliciesLink";
+  WAZUH_MENU_SECURITY_SECTIONS_CY_TEST_ID["ROLES_MAPPING"] = "menuSecurityRoleMappingLink";
+})(WAZUH_MENU_SECURITY_SECTIONS_CY_TEST_ID || (exports.WAZUH_MENU_SECURITY_SECTIONS_CY_TEST_ID = WAZUH_MENU_SECURITY_SECTIONS_CY_TEST_ID = {}));
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInd6LW1lbnUtc2VjdXJpdHkuY3kudHMiXSwibmFtZXMiOlsiV0FaVUhfTUVOVV9TRUNVUklUWV9TRUNUSU9OU19DWV9URVNUX0lEIl0sIm1hcHBpbmdzIjoiOzs7Ozs7O0FBQUE7Ozs7Ozs7Ozs7O0lBWVlBLHVDOzs7V0FBQUEsdUM7QUFBQUEsRUFBQUEsdUM7QUFBQUEsRUFBQUEsdUM7QUFBQUEsRUFBQUEsdUM7QUFBQUEsRUFBQUEsdUM7R0FBQUEsdUMsdURBQUFBLHVDIiwic291cmNlc0NvbnRlbnQiOlsiLypcbiAqIFdhenVoIGFwcCAtIFdhenVoIENvbnN0YW50cyBmaWxlIGZvciBDeXByZXNzXG4gKiBDb3B5cmlnaHQgKEMpIDIwMTUtMjAyMiBXYXp1aCwgSW5jLlxuICpcbiAqIFRoaXMgcHJvZ3JhbSBpcyBmcmVlIHNvZnR3YXJlOyB5b3UgY2FuIHJlZGlzdHJpYnV0ZSBpdCBhbmQvb3IgbW9kaWZ5XG4gKiBpdCB1bmRlciB0aGUgdGVybXMgb2YgdGhlIEdOVSBHZW5lcmFsIFB1YmxpYyBMaWNlbnNlIGFzIHB1Ymxpc2hlZCBieVxuICogdGhlIEZyZWUgU29mdHdhcmUgRm91bmRhdGlvbjsgZWl0aGVyIHZlcnNpb24gMiBvZiB0aGUgTGljZW5zZSwgb3JcbiAqIChhdCB5b3VyIG9wdGlvbikgYW55IGxhdGVyIHZlcnNpb24uXG4gKlxuICogRmluZCBtb3JlIGluZm9ybWF0aW9uIGFib3V0IHRoaXMgb24gdGhlIExJQ0VOU0UgZmlsZS5cbiAqL1xuXG5leHBvcnQgZW51bSBXQVpVSF9NRU5VX1NFQ1VSSVRZX1NFQ1RJT05TX0NZX1RFU1RfSUQge1xuICBVU0VSUyA9ICdtZW51U2VjdXJpdHlVc2Vyc0xpbmsnLFxuICBST0xFUyA9ICdtZW51U2VjdXJpdHlSb2xlc0xpbmsnLFxuICBQT0xJQ0lFUyA9ICdtZW51U2VjdXJpdHlQb2xpY2llc0xpbmsnLFxuICBST0xFU19NQVBQSU5HID0gJ21lbnVTZWN1cml0eVJvbGVNYXBwaW5nTGluaycsXG59XG4iXX0=

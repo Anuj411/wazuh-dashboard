@@ -1,0 +1,29 @@
+{
+  "id": "wazuh",
+  "version": "4.3.10-4311",
+  "opensearchDashboardsVersion": "1.2.0",
+  "configPath": [
+    "wazuh"
+  ],
+  "requiredPlugins": [
+    "navigation",
+    "data",
+    "discover",
+    "inspector",
+    "visualizations",
+    "uiActions",
+    "charts",
+    "savedObjects",
+    "opensearchDashboardsReact",
+    "opensearchDashboardsUtils",
+    "opensearchDashboardsLegacy"
+  ],
+  "optionalPlugins": [
+    "security",
+    "securityDashboards",
+    "searchguard",
+    "telemetry"
+  ],
+  "server": true,
+  "ui": true
+}
